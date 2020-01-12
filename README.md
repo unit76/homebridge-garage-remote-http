@@ -1,4 +1,4 @@
-# homebridge-http-garage
+# homebridge-garage-remote-http
 
 [![npm](https://img.shields.io/npm/v/homebridge-http-garage.svg)](https://www.npmjs.com/package/homebridge-http-garage) [![npm](https://img.shields.io/npm/dt/homebridge-http-garage.svg)](https://www.npmjs.com/package/homebridge-http-garage)
 
