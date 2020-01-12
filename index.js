@@ -5,7 +5,7 @@ const request = require('request')
 module.exports = function (homebridge) {
   Service = homebridge.hap.Service
   Characteristic = homebridge.hap.Characteristic
-  homebridge.registerAccessory('homebridge-http-garage', 'GarageDoorOpener', GarageDoorOpener)
+  homebridge.registerAccessory('homebridge-garage-remote-http', 'GarageDoorOpener', GarageDoorOpener)
 }
 
 function GarageDoorOpener (log, config) {
