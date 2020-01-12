@@ -1,6 +1,6 @@
 # homebridge-garage-remote-http
 
-[![npm](https://img.shields.io/npm/v/homebridge-http-garage.svg)](https://www.npmjs.com/package/homebridge-garage-remote-http) [![npm](https://img.shields.io/npm/dt/homebridge-http-garage.svg)](https://www.npmjs.com/package/homebridge-garage-remote-http)
+[![npm](https://img.shields.io/npm/v/homebridge-garage-remote-http.svg)](https://www.npmjs.com/package/homebridge-garage-remote-http) [![npm](https://img.shields.io/npm/dt/homebridge-garage-remote-http.svg)](https://www.npmjs.com/package/homebridge-garage-remote-http)
 
 ## Description
 
