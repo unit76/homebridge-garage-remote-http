@@ -23,6 +23,12 @@ Find script samples for the opener in the _examples_ folder.
        "name": "Garage",
        "openURL": "http://myurl.com/open",
        "closeURL": "http://myurl.com/close"
+       "openTime": "30",
+       "closeTime": "30",
+       "autoLock": "true",
+       "autoLockDelay": "30",
+       "switchOff": "true",
+       "switchOffDelay": "5"
      }
 ]
 ```
@@ -42,6 +48,8 @@ Find script samples for the opener in the _examples_ folder.
 | `closeTime` | Time (in seconds) to simulate your garage closing | `10` |
 | `autoLock` | Whether your garage should auto-close after being opened | `false` |
 | `autoLockDelay` | Time (in seconds) until your garage will automatically close (if enabled) | `20` |
+| `switchOff` | Closes the garage immediately without animation. For IR remote control use. | `false` |
+| `switchOffDelay` | Time (in seconds) until your garage will automatically close without animation (if enabled) | `2` |
 | `polling` | Whether the state should be polled at intervals | `false` |
 | `pollInterval` | Time (in seconds) between device polls (if `polling` is enabled) | `120` |
 | `statusURL` | URL to retrieve state on poll (should return `0` or `1`) | N/A |
