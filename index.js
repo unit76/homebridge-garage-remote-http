@@ -19,6 +19,9 @@ function GarageDoorOpener (log, config) {
   this.openTime = config.openTime || 10
   this.closeTime = config.closeTime || 10
 
+  this.switchOff = config.switchOff || true
+  this.switchOffDelay = config.switchOffDelay || 1
+
   this.autoLock = config.autoLock || false
   this.autoLockDelay = config.autoLockDelay || 20
 
@@ -102,7 +105,10 @@ GarageDoorOpener.prototype = {
           this.log('Started closing')
           this.simulateClose()
         } else {
-          this.log('Started opening')
+		  this.log('Started opening')
+		  if (this.switchOff) {
+			this.switchOffFunction()
+		  }
           if (this.autoLock) {
             this.autoLockFunction()
           }
@@ -135,6 +141,15 @@ GarageDoorOpener.prototype = {
       this.service.setCharacteristic(Characteristic.TargetDoorState, 1)
       this.log('Autolocking...')
     }, this.autoLockDelay * 1000)
+  },
+
+  switchOffFunction: function () {
+	this.log('Waiting %s seconds for switch off', this.switchOffDelay)
+    setTimeout(() => {
+	  this.log('SwitchOff...')
+	  this._httpRequest(this.closeURL, '', this.http_method, function (error, response, responseBody) {
+		}.bind(this))
+    }, this.switchOffDelay * 1000)
   },
 
   getServices: function () {
