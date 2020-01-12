@@ -19,8 +19,8 @@ function GarageDoorOpener (log, config) {
   this.openTime = config.openTime || 10
   this.closeTime = config.closeTime || 10
 
-  this.switchOff = config.switchOff || true
-  this.switchOffDelay = config.switchOffDelay || 1
+  this.switchOff = config.switchOff || false
+  this.switchOffDelay = config.switchOffDelay || 2
 
   this.autoLock = config.autoLock || false
   this.autoLockDelay = config.autoLockDelay || 20
