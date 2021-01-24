@@ -91,7 +91,7 @@ GarageDoorOpener.prototype = {
   setTargetDoorState: function (value, callback) {
     var url
     this.log.debug('Setting targetDoorState to %s', value)
-    if (value === 1) {
+    if (value === "ON") {
       url = this.closeURL
     } else {
       url = this.openURL
@@ -101,7 +101,7 @@ GarageDoorOpener.prototype = {
         this.log.warn('Error setting targetDoorState: %s', error.message)
         callback(error)
       } else {
-        if (value === 1) {
+        if (value === "ON") {
           this.log('Started closing')
           this.simulateClose()
         } else {
